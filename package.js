@@ -1,7 +1,7 @@
 Package.describe({
   name: 'jorisroling:mongo-exporter',
   summary: 'Export and import all your Orion data',
-  version: '1.0.8',
+  version: '1.0.9',
   git: 'https://github.com/jorisroling/mongo-exporter'
 });
 

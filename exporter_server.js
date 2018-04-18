@@ -26,7 +26,7 @@ function mongo_values() {
   } else {
     mongo={
       host: 'localhost',
-      port: 3001,
+      port: process.env.PORT ? (process.env.PORT+1) : 3001,
       db: 'meteor',
     }
   }    
