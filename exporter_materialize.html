@@ -1,0 +1,39 @@
+<template name="jorisroling_mongoExporter_materialize">
+  {{# Layout template=materializeHeader }}
+      Export / Import
+  {{/ Layout }}
+  {{# Layout template=materializeContent }}
+    {{# with currentError }}
+      <div class="red">
+        <b>[{{ error }}]</b> {{ reason }}
+      </div>
+    {{/ with }}
+    <p>
+      <b>Export</b>
+    </p>
+    <p class="grey-text">
+      Export your entire database.
+    </p>
+    <p>
+      <a href="#" class="btn btn-export">Export</a>
+    </p>
+    <div class="divider"></div>
+    <p>
+      <b>Import</b>
+    </p>
+    <p class="grey-text">
+      Replace your entire database with the new one.
+    </p>
+    {{# if isLoading }}
+    <p>
+      <b>Importing data...</b>
+    </p>
+    {{ else }}
+    <p>
+      <span class="btn btn-file btn-danger">
+          Import <input type="file" name="file" class="input-import">
+      </span>
+    </p>
+    {{/ if }}
+  {{/ Layout }}
+</template>
